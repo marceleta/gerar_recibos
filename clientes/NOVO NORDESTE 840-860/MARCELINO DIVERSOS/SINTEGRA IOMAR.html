@@ -1,0 +1,278 @@
+
+<!-- saved from url=(0046)http://www.sefaz.ba.gov.br/Sintegra/Result.asp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+	
+		<title>SINTEGRA/ICMS - Consulta Pública</title>
+	</head>
+	<body bgcolor="#cbd6fd" text="#000000">
+		<script language="JavaScript">
+function CONTRIBUINTE(idCNPJ, idIE, idTIPO, idPESQ)
+{
+ document.frm_EmpresaSocios.txt_CNPJ.value = idCNPJ;
+ document.frm_EmpresaSocios.txt_IE.value = idIE;
+ document.frm_EmpresaSocios.txt_TIPO.value = idTIPO;
+ document.frm_EmpresaSocios.txt_PESQ.value = idPESQ;
+ document.frm_EmpresaSocios.action = "consulta_empresa_principal.asp";
+ document.frm_EmpresaSocios.submit();
+}
+function SOCIOS(idCNPJ, idIE, idTIPO, idPESQ)
+{
+ document.frm_EmpresaSocios.txt_CNPJ.value = idCNPJ;
+ document.frm_EmpresaSocios.txt_IE.value = idIE;
+ document.frm_EmpresaSocios.txt_TIPO.value = idTIPO;
+ document.frm_EmpresaSocios.txt_PESQ.value = idPESQ;
+ document.frm_EmpresaSocios.action = "consulta_empresa_socios.asp";
+ document.frm_EmpresaSocios.submit();
+}
+function AIDFPAFS(idCNPJ, idIE, idTIPO, idPESQ)
+{
+ document.frm_EmpresaSocios.txt_CNPJ.value = idCNPJ;
+ document.frm_EmpresaSocios.txt_IE.value = idIE;
+ document.frm_EmpresaSocios.txt_TIPO.value = idTIPO;
+ document.frm_EmpresaSocios.txt_PESQ.value = idPESQ;
+ document.frm_EmpresaSocios.action = "consulta_empresa_aidf_pafs.asp";
+ document.frm_EmpresaSocios.submit();
+}
+function SELECAO(idTIPO, idPESQ)
+{
+ document.frm_EmpresaSocios.txt_TIPO.value = idTIPO;
+ document.frm_EmpresaSocios.txt_PESQ.value = idPESQ;
+ document.frm_EmpresaSocios.action = "consulta_empresa_inscricoes.asp";
+ document.frm_EmpresaSocios.submit();
+}
+		</script>
+		<table width="760" border="1" align="center" cellpadding="3" cellspacing="0" style="WIDTH: 760px">
+			<tbody><tr>
+				<td valign="center" bgcolor="#ffffff">
+					<div align="center"><img height="108" src="./SINTEGRA IOMAR_files/Sintegra.jpg" width="81"></div>
+				</td>
+				<td valign="center" bgcolor="#f1f1b1">
+					<div align="center">
+						<p><font color="#000080"><font face="Verdana"><strong><font size="4">Consulta&nbsp;Pública ao 
+											Cadastro<br>
+											do Estado
+											da
+											&nbsp;Bahia<br>
+										</font><!--FONT size=1>Cadastro 
+      Atualizado até : 
+        <!--% Response.write Left(FormatDateTime(rsCadastro("dtc_atualizacao")),10)
+        %--></strong></font></font></p>
+					</div>
+				</td>
+				<td valign="center" bgcolor="#ffffff">
+					<div align="center"><img height="108" src="./SINTEGRA IOMAR_files/ba.jpg" width="81"></div>
+				</td>
+			</tr>
+		</tbody></table>
+		<table width="760" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px" border="1" bgcolor="white">
+			<tbody><tr>
+				<td style="WIDTH: 380px" width="380">
+					<div align="left"><b><font face="Verdana" size="1">Data da Consulta:
+								22/10/2018
+							</font></b>
+					</div>
+				</td>
+				<td style="WIDTH: 380px" width="380">
+					<div align="left"><b><font face="Verdana" size="1">Número da Consulta:
+								
+							</font></b>
+					</div>
+				</td>
+			</tr>
+		</tbody></table>
+		<br>
+		<form name="frm_EmpresaSocios" method="post">
+			<table width="760" border="0" cellspacing="0" cellpadding="3" align="center" bordercolor="#ffffff">
+				<tbody><tr>
+					<td><b><font face="Verdana" size="1" color="#996600">IDENTIFICAÇÃO</font></b></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" background="http://www.sefaz.ba.gov.br/Sintegra/Result.asp" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="45" valign="top" bgcolor="#f1f1b1" style="WIDTH: 45px"><b><font face="Verdana" size="1">CNPJ:</font></b></td>
+					<td width="230" valign="top" bgcolor="#fafae4" style="WIDTH: 230px"><font face="Verdana" size="1">01.450.262/0001-10<font face="Verdana" size="1">&nbsp;</font></font></td>
+					<td width="120" valign="top" bgcolor="#f1f1b1" style="WIDTH: 120px">
+						<div align="left"><b><font face="Verdana" size="1">Inscrição Estadual:</font></b></div>
+					</td>
+					<td valign="top" bgcolor="#fafae4" style="WIDTH: 230px" width="230"><font face="Verdana" size="1">048.283.915&nbsp;</font></td>
+					<td style="WIDTH: 30px" valign="top" width="30" bgcolor="#f1f1b1"><strong><font face="Verdana" size="1">UF:</font></strong></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">BA</font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" background="http://www.sefaz.ba.gov.br/Sintegra/Result.asp" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="85" valign="top" bgcolor="#f1f1b1" style="WIDTH: 85px"><b><font size="1" face="Verdana">Razão 
+								Social:</font></b></td>
+					<td width="653" valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">IOMAR COMERCIO DE BICICLETAS E TRICICLOS EIRELI                                                                                                       &nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<br>
+			<table width="760" cellspacing="0" cellpadding="3" align="center" bordercolor="#ffffff">
+				<tbody><tr>
+					<td><b><font face="Verdana" size="1" color="#996600">ENDEREÇO</font></b></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="80" valign="top" bgcolor="#f1f1b1" style="WIDTH: 80px"><b><font size="1" face="Verdana">Logradouro:</font></b></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">AVENIDA                                            PRESIDENTE TANCREDO NEVES                                   &nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" background="http://www.sefaz.ba.gov.br/Sintegra/Result.asp" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="60" valign="top" bgcolor="#f1f1b1" style="WIDTH: 60px"><b><font face="Verdana" size="1">Número:</font></b></td>
+					<td valign="top" bgcolor="#fafae4" style="WIDTH: 70px" width="70"><font face="Verdana" size="1">140       &nbsp;</font></td>
+					<td valign="top" bgcolor="#f1f1b1" style="WIDTH: 95px" width="95"><strong><font face="Verdana" size="1">Complemento:</font></strong></td>
+					<td valign="top" bgcolor="#fafae4" style="WIDTH: 100px" width="100"><font face="Verdana" size="1">                                                  &nbsp;</font></td>
+					<td valign="top" bgcolor="#f1f1b1" style="WIDTH: 50px" width="50"><strong><font face="Verdana" size="1">Bairro:</font></strong></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1"><!--%
+     if isnull (rsCadastro("des_bairro_distrito")) then 
+		Response.Write (rsCadastro("des_bairro"))
+	 else
+		Response.Write(rsCadastro("des_bairro_distrito"))
+	 end if %-->Alagadi�o                                         &nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="30" valign="top" bgcolor="#f1f1b1" style="WIDTH: 30px"><b><font size="1" face="Verdana">UF:</font></b></td>
+					<td valign="top" bgcolor="#fafae4" style="WIDTH: 100px" width="100"><font face="Verdana" size="1">BA&nbsp;</font></td>
+					<td valign="top" bgcolor="#f1f1b1" style="WIDTH: 70px" width="70"><strong><font face="Verdana" size="1">Município:</font></strong></td>
+					<td valign="top" bgcolor="#fafae4" style="WIDTH: 300px" width="300"><font face="Verdana" size="1">JUAZEIRO                                          &nbsp;</font></td>
+					<td valign="top" bgcolor="#f1f1b1" style="WIDTH: 40px" width="40"><strong><font face="Verdana" size="1">CEP:</font></strong></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">48903299&nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" background="http://www.sefaz.ba.gov.br/Sintegra/Result.asp" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="130" valign="top" bgcolor="#f1f1b1" style="WIDTH: 130px"><b><font size="1" face="Verdana">Endereço 
+								Eletrônico:</font></b></td>
+					<td width="386" valign="top" bgcolor="#fafae4" style="WIDTH: 386px"><font face="Verdana" size="1">IOMAR.COMERCIO@GMAIL.COM                                                                                           &nbsp;</font></td>
+					<td valign="top" width="70" bgcolor="#f1f1b1" style="WIDTH: 70px"><strong><font face="Verdana" size="1">Telefone:</font></strong></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">(74  ) 36134671&nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<br>
+			<table width="760" cellspacing="0" cellpadding="3" align="center">
+				<tbody><tr>
+					<td><b><font face="Verdana" size="1" color="#996600">INFORMAÇÕES COMPLEMENTARES</font></b></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="135" valign="top" bgcolor="#f1f1b1" style="WIDTH: 135px"><b><font size="1" face="Verdana">Atividade 
+								Econômica:</font></b></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">Com�rcio varejista de bicicletas e triciclos; pe�a&nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="170" valign="top" bgcolor="#f1f1b1" style="WIDTH: 170px"><b><font size="1" face="Verdana">Data 
+								da Inscrição Estadual:</font></b></td>
+					<td valign="top" bgcolor="#fafae4" style="WIDTH: 260px" width="260"><font face="Verdana" size="1">
+							30/03/1998
+							&nbsp;</font></td>
+					<td style="WIDTH: 115px" valign="top" width="115" bgcolor="#f1f1b1"><font face="Verdana" size="1"><strong>Usuário 
+								SEPD :</strong></font></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">------<!--%
+    	Lsql_aidf_doc = " select ad.num_aidf, dtc_validade_aidf, dtc_autorizacao_aidf, cod_serie_subser_documto, num_inicio_controle, num_fim_controle,  " & _
+				" a.num_inscricao_estad, num_cgc_grf_fab_base, num_cgc_grf_fab_filial, dig_cgc_grf_fab, ad.cod_serie_subser_documto, ad.cod_documento_fiscal " & _
+				" FROM bd_contribuinte..aidf_documento ad, bd_contribuinte..aidf a, bd_contribuinte..contribuinte_inscrito c " & _
+				" WHERE c.num_inscricao_estad = " & Str_InsEst & " and  a.num_aidf = ad.num_aidf and c.num_inscricao_estad =  a.num_inscricao_estad "
+
+		'If (Lrst_pesquisa.State = adStateOpen) Then Lrst_pesquisa.Close
+'		Response.Write (Lsql_aidf_doc)
+'		Response.End 
+
+		Set rsAUPD = GetRS(Lsql_aidf_doc)
+    
+		If Not rsAUPD.EOF Then
+			Response.Write "Sim"
+		else
+			Response.Write "Não"
+		End If
+         %--></font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="155" valign="top" bgcolor="#f1f1b1" style="WIDTH: 155px"><b><font size="1" face="Verdana">
+								Situação Cadastral Atual:</font></b></td>
+					<td width="275" valign="top" bgcolor="#fafae4" style="WIDTH: 275px"><font face="Verdana" size="1">
+							Habilitado
+							&nbsp; </font>
+					</td>
+					<td style="WIDTH: 185px" valign="top" width="185" bgcolor="#f1f1b1"><font face="Verdana" size="1"><strong>Data 
+								desta Situação Cadastral:</strong></font></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">
+							30/03/1998
+						</font>
+					</td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px" id="Table1">
+				<tbody><tr>
+					<td width="65" valign="top" bgcolor="#f1f1b1" style="WIDTH: 65px"><b><font size="1" face="Verdana">
+								Condição:</font></b></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">
+							EMPRESA PEQUENO PORTE                             
+							&nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="90" valign="top" bgcolor="#f1f1b1" style="WIDTH: 90px"><b><font size="1" face="Verdana">
+								Observações:</font></b></td>
+					<td valign="top" bgcolor="#fafae4"><font size="1" face="Verdana">&nbsp;</font></td>
+				</tr>
+			</tbody></table>
+			<table width="760" border="1" cellspacing="0" cellpadding="3" align="center" style="WIDTH: 760px">
+				<tbody><tr>
+					<td width="180" valign="top" bgcolor="#f1f1b1" style="WIDTH: 180px"><b><font size="1" face="Verdana">Regime 
+								de Apuração de ICMS:</font></b></td>
+					<td valign="top" bgcolor="#fafae4"><font face="Verdana" size="1">
+							SIMPLES NACIONAL                                  
+							&nbsp; </font>
+					</td>
+				</tr>
+			</tbody></table>
+			<br>
+			<table width="760" cellspacing="0" cellpadding="3" align="center" bordercolor="#ffffff" style="WIDTH: 760px">
+				<tbody><tr>
+					<td>
+						<p><font face="Verdana"><font size="1"><strong>Observações: </strong>
+									</font></font></p><ul><font face="Verdana"><font size="1">
+										<li>
+											Os dados acima são baseados em informações existentes na base de dados da Sefaz-Bahia e demonstra a situação cadastral do contribuinte nesta data.
+										</li>
+										
+									</font></font></ul><font face="Verdana"><font size="1">
+								</font></font>
+						<p></p>
+					</td>
+				</tr>
+			</tbody></table>
+			<div align="center">
+				<input type="hidden" name="EstadoSelecionado" value="da Bahia"><font face="Verdana" size="1">
+				</font><input type="hidden" name="SiglaEstadoSelecionado" value="BA"><font face="Verdana" size="1">
+				</font><input type="hidden" name="txt_CNPJ"><font face="Verdana" size="1"> </font>
+				<input type="hidden" name="txt_IE"><font face="Verdana" size="1"> </font><input type="hidden" name="txt_TIPO"><font face="Verdana" size="1">
+				</font><input type="hidden" name="txt_PESQ"><font face="Verdana" size="1"> </font>
+				<input type="hidden" name="NCons" value=""><font face="Verdana" size="1"> </font>
+			</div>
+			<font face="Verdana">
+		
+		<p align="center"><font face="Verdana" size="2"><br>
+				</font></p><p align="center"><font face="Verdana" size="2">
+					<font face="Verdana" size="2"><a href="http://www.sefaz.ba.gov.br/Sintegra/Sintegra.asp?estado=BA">
+							Voltar para nova seleção de contribuinte (BA)</a><br>
+						<font face="Verdana" size="2"><a href="http://www.sefaz.ba.gov.br/">Acessar cadastro de 
+								outro Estado</a></font></font></font></p><font face="Verdana" size="2"><font face="Verdana" size="2">
+			</font>
+		</font></font></form>
+	
+
+</body></html>

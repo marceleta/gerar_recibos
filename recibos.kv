@@ -1,0 +1,178 @@
+<SelecaoClientes>:
+    
+    id: selecao_clientes
+
+    MDGridLayout:
+        cols: 3
+        pos_hint: {'center_x': 0.5, 'center_y':0.5}
+        padding: "15dp"
+        #spacing: "12dp"
+        canvas.before:
+            Color:
+                rgb: 0,0,0
+            Line:
+                width: 2
+                rectangle: self.x, self.y, self.width, self.height
+        
+        MDBoxLayout:
+            orientation: "vertical"
+                
+            MDLabel:
+                text: "Clientes"
+                size_hint: 1, 0.1
+            MDScrollView:
+                canvas.before:
+                    Color:
+                        rgb: 0,0,0
+                    Line:
+                        width:2
+                        rectangle: self.x, self.y, self.width, self.height
+                MDList:
+                    id: lista_clientes
+
+        MDFloatLayout
+            padding: "12dp"
+            MDRaisedButton:
+                pos_hint: {'center_x': 0.5, "center_y": 0.8}
+                text: "Adicionar todos"
+                size_hint: None, None
+                width: 100
+                height: 100
+                on_press: root.adicionar_todos_clientes()
+
+            MDRaisedButton:
+                text: "Remover todos"
+                pos_hint: {"center_x": 0.5, "center_y": 0.3}
+                size_hint: None, None
+                width: 100
+                height: 100
+                on_press: root.remover_todos_selecionados()
+            
+        MDBoxLayout:
+            orientation: "vertical"
+            MDLabel:
+                text: "Selecionados"
+                size_hint: 1, 0.1
+            MDScrollView:
+                canvas.before:
+                    Color:
+                        rgb: 0,0,0
+                    Line:
+                        width:2
+                        rectangle: self.x, self.y, self.width, self.height
+                MDList:
+                    id: lista_selecionados
+        
+        MDFloatLayout:
+            size_hint: 1, 0.2
+            MDRaisedButton:
+                pos_hint: {'x': 2, 'y': 0.01}
+                text: 'Gerar Recibos'
+                #on_press: root.entrada_dados_dos_recibos()
+                on_press: root.tela_gerar_boletos()
+
+            MDRaisedButton:
+                pos_hint: {'x': 2.6, 'y': 0.01}
+                padding: "10dp"
+                text: 'Cancelar'
+                on_press: root.cancelar()
+
+<GerarRecibo>:
+    id: tela_gerar_recibos
+    FloatLayout:
+        canvas.before:
+            Color:
+                rgb: 1,0,0
+            Line:
+                width: 2
+                rectangle: self.x, self.y, self.width, self.height
+        MDGridLayout:
+            canvas.before:
+                Color:
+                    rgb: 1,0,0
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+            cols: 2
+            size_hint: .5, .1
+            
+            pos_hint: {'center_x': .4, 'center_y':0.8}
+            MDLabel:
+                id: lb_num_cliente
+                size_hint_x: None
+                width: 40
+                text: '1/3'
+                #pos_hint:{'x':0.01, 'y':0.4}
+            MDLabel:
+                id:lb_nome_cliente
+                size_hint_x: None
+                width: 400
+                text: 'Nome Cliente'
+                #pos_hint: {'x':0.10, 'y':0.4}
+
+        MDGridLayout:
+            cols: 3
+            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+            size_hint: .8, .4
+            padding: 20
+            spacing: 20
+            canvas.before:
+                Color:
+                    rgb: 1,0,0
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+            MDTextField:
+                id: tf_valor_parcela
+                hint_text:'Valor da parcela'
+                helper_text: 'Formato 999,00'
+                on_text: root.on_text_valor(self, self.text)
+
+            MDTextField:
+                id: tf_data_inicio_contrato
+                hint_text: 'Data início contrato'
+                helper_text: 'Formato dd/mm/aaaa'
+                validator: 'date'
+                date_format: 'dd/mm/yyyy'
+                on_text: root.on_text_data_inicio(self, self.text)
+
+            MDTextField:
+                id: tf_data_final_contrato
+                hint_text: 'Data final contrato'
+                helper_text: 'Formato dd/mm/aaaa'
+                validator: 'date'
+                date_format: 'dd/mm/yyyy'
+                on_text: root.on_text_data_final(self, self.text)
+
+                
+        MDBoxLayout
+            pos_hint: {'center_x': .4, 'center_y': 0.55}
+            size_hint: 0.5, 0.5
+            
+            MDTextField:
+                id: tf_valor_extenso
+                multiline: True
+                hint_text: "Valor por extenso"
+                on_text: root.on_text_valor_extenso(self, self.text)
+                
+        MDBoxLayout:
+            size_hint: .2, .1
+            pos_hint: {'center_x': 0.5, 'center_y': .25}
+            spacing: 20
+            MDRaisedButton:
+                id: btn_gerar_recibo
+                text: 'Gerar Recibos'
+                on_press: root.gerar_documento()
+            MDRaisedButton:
+                text: 'Cancelar'
+                on_press: root.cancelar()
+            
+        
+
+        
+
+
+    
+
+
+

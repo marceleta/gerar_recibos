@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0088)http://efisco.sefaz.pe.gov.br/sfi_trb_gcc/PRConsultarExtratoCadastroContribuinteSINTEGRA -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<title>Perfil do Contribuinte</title>
+
+<link href="./BIKE_files/sefaz_pe.css" rel="stylesheet" type="text/css">
+
+
+
+
+<script language="JavaScript" type="text/javascript" src="./BIKE_files/biblioteca_funcoes_principal.js.download"></script>
+<script language="JavaScript" type="text/javascript" src="./BIKE_files/biblioteca_funcoes_radiobutton.js.download"></script>
+
+<script language="JavaScript" type="text/javascript">
+// Retorna para o formulario de consulta
+function voltar(pAcao, pEvento) {
+    document.frm_principal.nao_utilizar_id_contexto_sessao.value = false;
+	submeterFormulario(pAcao, pEvento);
+}
+
+
+</script>
+<meta name="GENERATOR" content="IBM WebSphere Studio">
+<script type="text/javascript" src="./BIKE_files/jquery.js.download"></script></head>
+
+<body class="paginadados" onload="" style="">
+<form name="frm_principal" method="post">
+<input type="hidden" id="id_contexto_sessao" name="id_contexto_sessao" value="1">
+<input type="hidden" id="evento" name="evento" value="processarInclusao">
+<input type="hidden" id="nao_utilizar_id_contexto_sessao" name="nao_utilizar_id_contexto_sessao" value="S">
+<input type="hidden" id="chave_primaria_aux" name="ID_REQ_RADIO_DETALHES_PESSOA" value="">
+<input type="hidden" id="pagina" name="Pagina" value="resumo">
+<input type="hidden" id="nmServletRetorno" name="NmServletRetorno" value="PRConsultarExtratoCadastroContribuinteSINTEGRA">
+
+	<table id="table_conteiner" class="conteiner" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+  <td>
+<div id="fundoCorpoPagina"></div>
+<input type="hidden" name="id_sessao" value="651D27713029E13A0A08D40E8616DB4C">
+<input type="hidden" name="nm_path_servlet_anterior" value="/sfi_trb_gcc/PRConsultarExtratoCadastroContribuinteSINTEGRA">
+<input type="hidden" name="nm_path_jsp_anterior" value="jsp/servico01/consultar_extratocadastrocontribuinteSINTEGRA/p04detalhamento.jsp">
+<input type="hidden" name="in_enderecodomicilio_valido" value="">
+<input type="hidden" name="cd_menu" value="">
+<input type="hidden" name="dt_hoje_framework" value="04/07/2018">
+<input type="hidden" name="hr_hoje_framework" value="08:47:45">
+<input type="hidden" name="cd_usuario" value="1">
+<input type="hidden" name="cd_tipo_usuario_sca" value="">
+<input type="hidden" name="historico" value="Relação de Contribuinte de ICMS SINTEGRA">
+<input type="hidden" name="nm_titulo_pagina" value="">
+<input type="hidden" name="in_janela_auxiliar" value="">
+<input type="hidden" name="in_formulario_submetido" value="">
+<script type="text/javascript" src="./BIKE_files/mensagens_globais.js.download"></script>
+<script type="text/javascript">
+if (window.carregarJavascriptAsync) {
+if (!window.jQuery) carregarJavascriptAsync('/sfi/js/jquery.js', executarFuncoesCargaJQueryAsync);
+}
+</script>
+<!--[if lte IE 8]><SCRIPT type="text/javascript">var inNavegadorIE8 = true;</SCRIPT><![endif]-->
+  </td>
+  <td>
+    <table width="100%" cellspacing="0" cellpadding="0">
+     <tbody>
+ <tr>
+ 	<td>
+
+<div id="areaCabecalho" class="margemFundoPadrao">
+<div id="bgCabecalho">
+<div class="bgCabecalho"><img id="logotipo" alt="SEFAZ e-Fisco" src="./BIKE_files/marca.png"></div>
+</div>
+<div id="areaLogotipoSefaz">
+<img id="imgLogotipoSefaz" src="./BIKE_files/marca_sefaz.png" alt="SEFAZ-PE">
+</div>
+<div id="areaFormTopo">
+<div id="bgAreaInfoTopo"></div>
+<div id="areaInfoTopo" title="Ambiente: S02">
+4 de Julho de 2018, 08:47:45&nbsp;
+<input id="botaoAjuda" class="botaofuncaop" type="button" value="?">
+</div>
+</div>
+</div>
+ 	</td>
+ </tr>
+<tr>
+<td>
+<div class="clearfix navegacao">
+<input type="button" name="btt_menuprincipal" class="botaooculto" accesskey="u" onclick="setBotaoAtivado(this); setBotaoOperacaoAtivado(this); submeterFormulario(&#39;/sfi_com_sca/PRMontarMenuAcesso&#39;, &#39;&#39;)"><ul>
+    <li><a class="historico" href="javascript:document.frm_principal.btt_menuprincipal.click()"><span class="botao_icone iconeInicial botaoLinha"></span><span class="linkMenuPrincipal">Menu Principal (u)</span></a></li>
+<li>Relação de Contribuinte de ICMS SINTEGRA</li><li style="background-image: none; padding-right: 0;"></li></ul></div></td>
+</tr>
+</tbody>
+</table>
+  </td>
+  <td class="espacadorC1"></td>
+</tr>
+<tr>
+  <td class="espacadorA2"></td>
+  <td class="espacadorB2">
+    <table id="table_areatrabalho" cellspacing="0" cellpadding="0" class="areatrabalho">
+    <tbody>
+    <tr>
+      <td valign="top" height="2%" class="conteinerfuncaopagina">
+<table id="table_funcaopagina" cellspacing="0" cellpadding="0" class="funcaopagina">
+<tbody>
+<tr>
+  <th class="funcaopagina">&nbsp;</th>
+  <th class="funcaopagina">
+  <table align="right">
+  <tbody>
+  <tr align="right">
+  <td><input type="button" title="Ajuda (4)" onmouseover="mudarBotaoOver(this)" onmousedown="afundarBotao(this)" onmouseup="levantarBotao(this)" onmouseout="mudarBotaoOut(this)" alt="Ajuda" onclick="abrirJanelaAjuda(&#39;/sfi_ajuda/sfi_trb_gcc/sfi_trb_gcc_ajuda.html#&#39;)" class="botaoajudaout" name="btt_help" accesskey="4"></td>
+  </tr>
+  </tbody>
+  </table>
+  </th>
+</tr>
+</tbody>
+</table>
+      </td>
+    </tr>
+
+			<tr>
+				<td class="conteinerconteudodados">
+					<div id="div_conteudodados" class="conteudodados">
+						<table id="table_conteudodados" class="conteudodados" cellpadding="0" cellspacing="0">
+							<tbody>
+								<tr>
+									<th class="textoseparadorgrupocampos" width="25%">Identificação</th>
+									<td class="textoseparadorgrupocampos"><hr></td>
+								</tr>
+								
+								<tr>
+									<th class="campoformulario" width="15%">Inscrição Estadual do Contribuinte: </th>
+									<td class="campoformulario"><input type="text" id="nuInscricaoEstadual" name="" value="0290181-10" class="camporeadonly" size="20" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">CPF/CNPJ: </th>
+									<td class="campoformulario"><input type="text" id="nuDocumento" name="" value="04.963.265/0001-46" class="camporeadonly" size="20" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Razão Social: </th>
+									<td class="campoformulario"><input type="text" id="nmRazaoSocialPessoa" name="" value="BIKE LEVY COMERCIAL LTDA" class="camporeadonly" size="150" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Nome Fantasia: </th>
+									<td class="campoformulario"><input type="text" id="nmFantasia" name="" value="BIKE LEVY" class="camporeadonly" size="150" readonly=""></td>
+								</tr>
+				 	
+								<tr>
+									<th class="textoseparadorgrupocampos" width="25%">Endereço</th>
+									<td class="textoseparadorgrupocampos"><hr></td>
+								</tr>
+								
+								<tr>
+									<th class="campoformulario" width="15%">CEP: </th>
+									<td class="campoformulario"><input type="text" id="nuCEP" name="" value="56.304-280" class="camporeadonly" size="15" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Rua: </th>
+									<td class="campoformulario"><input type="text" id="logradouroEmpresa" name="" value="RUA PADRE FRAGA" class="camporeadonly" size="120" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Número: </th>
+									<td class="campoformulario"><input type="text" id="nuLogradouroEmpresa" name="" value="380" class="camporeadonly" size="5" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Complemento: </th>
+									<td class="campoformulario"><input type="text" id="complementoLogradouroEmpresa" name="" value="CASA" class="camporeadonly" size="80" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Bairro: </th>
+									<td class="campoformulario"><input type="text" id="bairroLogradouroEmpresa" name="" value="CENTRO" class="camporeadonly" size="120" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Municipio: </th>
+									<td class="campoformulario"><input type="text" id="municipioEmpresa" name="" value="PETROLINA" class="camporeadonly" size="120" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Municipio IBGE: </th>
+									<td class="campoformulario"><input type="text" id="municipioIBGEEmpresa" name="" value="11101" class="camporeadonly" size="60" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Estado: </th>
+									<td class="campoformulario"><input type="text" id="sgUF" name="" value="PE" class="camporeadonly" size="4" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Telefone : </th>
+									<td class="campoformulario"><input type="text" id="nuDDD" name="" value="99" class="camporeadonly" size="3" readonly="">
+									<input type="text" id="fone" name="" value="38614853" class="camporeadonly" size="10" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Email: </th>
+									<td class="campoformulario"><input type="text" id="email" name="" value=" " class="camporeadonly" size="120" readonly=""></td>
+								</tr>
+								
+								<tr>
+									<th class="textoseparadorgrupocampos" width="25%">Informações Complementares</th>
+									<td class="textoseparadorgrupocampos"><hr></td>
+								</tr>
+								
+								<tr>
+									<th class="campoformulario" width="15%">Natureza Jurídica: </th>
+									<td class="campoformulario"><input type="text" id="naturezaJuridica" name="" value="SOCIEDADE EMPRESARIA LIMITADA" class="camporeadonly" size="80" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Capital Social: </th>
+									<td class="campoformulario"><input type="text" id="vlCapitalEmpresa" name="" value="10.000,00" class="camporeadonly" size="20" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Regime: </th>
+									<td class="campoformulario"><input type="text" id="dsRegime" name="" value="SIMPLES NACIONAL" class="camporeadonly" size="80" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Situação SINTEGRA: </th>
+									<td class="campoformulario"><input type="text" id="siSINTEGRA" name="" value="ATIVO" class="camporeadonly" size="15" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Situação Contribuinte: </th>
+									<td class="campoformulario"><input type="text" id="siContrib" name="" value="ATIVO" class="camporeadonly" size="15" readonly=""></td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Data desta Situação Cadastral: </th>
+									<td class="campoformulario"><input type="text" id="dtSituacao" name="" value="22/04/2002" class="camporeadonly" size="15" readonly=""></td>
+								</tr>
+								
+								<tr>
+									<th class="textoseparadorgrupocampos" width="25%">Atividades Econômicas</th>
+									<td class="textoseparadorgrupocampos"><hr></td>
+								</tr>
+								
+								<tr>
+									<th class="campoformulario" width="15%">Atividade Principal: </th>
+									<td class="campoformulario">
+										<input type="text" id="cdCNAEPrincipal" name="" value="4649-4/03" class="camporeadonly" size="10" readonly="">
+										<input type="text" id="dsCNAEPrincipal" name="" value="COMERCIO ATACADISTA DE BICICLETAS, TRICICLOS E OUTROS VEICULOS RECREATIVOS" class="camporeadonly" size="200" readonly="">
+									</td>
+								</tr>
+								<tr>
+									<th class="campoformulario" width="15%">Atividade Secundária: </th>
+									<td class="campoformulario">
+									
+										<input type="text" id="cdCNAESecundaria" name="" value="4541-2/02" class="camporeadonly" size="10" readonly="">
+										<input type="text" id="dsCNAESecudaria" name="" value="COMERCIO POR ATACADO DE PECAS E ACESSORIOS PARA MOTOCICLETAS E MOTONETAS" class="camporeadonly" size="200" readonly=""> <br>
+									
+									
+								</td>
+								</tr>
+								<tr>
+									<td class="textoseparadorgrupocampos"><hr></td>
+									<td class="textoseparadorgrupocampos"><hr></td>
+								</tr>
+								<tr>
+									<td class="campoformulario" width="100%" colspan="3">Os dados acima são baseados em informações fornecidas pelo contribuinte, estando sujeitos à posterior confirmação pelo Fisco.</td>
+								</tr>
+								<tr>
+									<td class="campoformulario" width="100%" colspan="3">Consulta realizada:  Quarta-Feira, 4 de Julho de 2018 às 08:47:45.</td>
+								</tr>
+								<tr class="conteinerbarraacoes">
+                   					<td class="botaofuncao" colspan="3"><input type="button" class="botaofuncaop" id="btt_voltar" name="btt_voltar" value="Voltar (v)" onclick="setBotaoAtivado(this); voltar(&#39;/sfi_trb_gcc/PRConsultarExtratoCadastroContribuinteSINTEGRA&#39;, &#39;exibirFiltroConsulta&#39;)" accesskey="v"></td>
+                    			</tr>
+							</tbody>   
+						</table>
+					</div>
+				</td>
+			</tr>
+        	
+</tbody>
+</table>
+</td>
+<td class="espacadorC2"></td>
+</tr>
+<script type="text/javascript">
+configurarPagina();
+</script>
+
+		</tbody>
+	</table>
+</form>
+
+
+
+</body></html>
