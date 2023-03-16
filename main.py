@@ -3,10 +3,12 @@ from kivymd.uix.widget import MDWidget
 from kivymd.uix.list import OneLineListItem
 from kivy.core.window import Window
 from kivymd.uix.screen import MDScreen
+from kivymd.uix.dialog import MDDialog
+from kivymd.uix.button import MDFlatButton
 from kivymd.uix.screenmanager import MDScreenManager
 from kivy.config import Config
 from kivy.properties import ListProperty
-import os, sys
+import os, sys, platform, subprocess
 from doc_recibo import CalculoRecibo, Recibos
 
 
@@ -114,12 +116,14 @@ class GerarRecibo(MDScreen):
         
     def proximo_cliente(self):
         self.limpar_labels()
+        
         self.num_clientes = len(self.clientes)
-        if self.num_clientes > 0:            
+            
+                  
+        if self.num_clientes > self.cliente_em_producao:            
             self.ids.lb_num_cliente.text = "{}/{}".format(str(self.cliente_em_producao + 1), str(len(self.clientes)))
             self.ids.lb_nome_cliente.text = str(self.clientes[self.cliente_em_producao].text)
-            self.cliente_em_producao = self.cliente_em_producao + 1
-        
+            self.cliente_em_producao += 1
             
     def limpar_labels(self):
         self.ids.tf_valor_parcela.text = ''
@@ -127,7 +131,7 @@ class GerarRecibo(MDScreen):
         self.ids.tf_data_final_contrato.text = ''
         self.ids.tf_valor_extenso.text = ''
     
-    def pegar_texto_labels (self):
+    def pegar_texto_campos(self):
         
         valores = {}
         valores['valor'] = self.ids.tf_valor_parcela.text
@@ -139,11 +143,59 @@ class GerarRecibo(MDScreen):
     
     
     def gerar_documento(self):
-        valores = self.pegar_texto_labels()
-        calculo_recibo = CalculoRecibo.gerar(valores)
-        path_cliente = 'clientes/' + self.ids.lb_nome_cliente.text
+        valores = self.pegar_texto_campos()
         
-        recibos = Recibos.gerar(path_cliente, calculo_recibo)
+        if self.teste_preenchimento(valores):
+        
+            calculo_recibo = CalculoRecibo.gerar(valores)
+            path_cliente = 'clientes/' + self.ids.lb_nome_cliente.text
+        
+            recibos = Recibos(path_cliente, calculo_recibo)
+        
+            recibos.criar_doc()
+        
+            full_path_doc = recibos.salvar()
+        
+            self.abrir_documento(full_path_doc)
+        
+            self.proximo_cliente()
+        else:
+            self.show_mensagem('Preencha todos os campos')
+            
+    def show_mensagem(self, mensagem):
+        self.dialog = MDDialog(
+            text=mensagem,
+            buttons=[
+                MDFlatButton(
+                    text='OK',
+                    on_release=lambda _: self.dialog.dismiss()
+                )
+            ]
+        )
+        self.dialog.open()
+            
+        
+    def teste_preenchimento(self, valores):
+        todos_campos_preenchidos = True
+        keys = valores.keys()
+        
+        for key in keys:
+            valor = valores[key]
+            if valor is "":
+                todos_campos_preenchidos = False
+                break
+            
+        return todos_campos_preenchidos
+        
+        
+        
+        
+    def abrir_documento(self, full_path_doc):
+        
+        if platform.system() == 'Windows':
+            os.startfile(full_path_doc)
+        else:
+            subprocess.call(('xdg-open', full_path_doc))
         
         
         

@@ -80,19 +80,8 @@
 <GerarRecibo>:
     id: tela_gerar_recibos
     FloatLayout:
-        canvas.before:
-            Color:
-                rgb: 1,0,0
-            Line:
-                width: 2
-                rectangle: self.x, self.y, self.width, self.height
+        
         MDGridLayout:
-            canvas.before:
-                Color:
-                    rgb: 1,0,0
-                Line:
-                    width: 2
-                    rectangle: self.x, self.y, self.width, self.height
             cols: 2
             size_hint: .5, .1
             
@@ -116,12 +105,7 @@
             size_hint: .8, .4
             padding: 20
             spacing: 20
-            canvas.before:
-                Color:
-                    rgb: 1,0,0
-                Line:
-                    width: 2
-                    rectangle: self.x, self.y, self.width, self.height
+           
             MDTextField:
                 id: tf_valor_parcela
                 hint_text:'Valor da parcela'

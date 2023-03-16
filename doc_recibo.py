@@ -94,23 +94,6 @@ class CalculoRecibo():
         data_ref_final = "{}/{}/{}".format(str(dia), str(mes), str(ano))
         
         return "{} à {}".format(data_vencimento, data_ref_final)
-                
-    @classmethod
-    def soma_mes(cls, data, numero_mes):
-        
-        split = data.split('/')
-        mes = int(split[1])
-        mes = mes + numero_mes
-        
-        if mes > 12:
-            ano = int(split[2])
-            ano = ano + 1
-            mes = numero_mes
-            nova_data = split[0] + '/' + str(mes) + '/' + str(ano)
-        else:
-            nova_data = split[0] + '/' + str(mes) + '/' + split[2]
-            
-        return nova_data
     
     @classmethod
     def mes_referencia(cls, data):
@@ -129,24 +112,32 @@ class Recibos():
         self.path_pasta_recibos = path_cliente + '/RECIBOS'
         self.path_cliente = path_cliente
         self.calculo_recibo = calculo_recibo
+        self.arquivo_nome = self.nome_arquivo(calculo_recibo[0]['{CONTRATO_FINAL}'])
     
-    def salvar():
-        pass
+    def salvar(self):
+    
+        self.modelo_recibo.save(self.arquivo_nome)
+        
+        return self.arquivo_nome
     
     
     def _carregar_doc_modelo(self):
-        path_recibo = self.path_cliente + '/RECIBOS/MODELO.docx'
+        path_recibo_modelo = self.path_cliente + '/RECIBOS/MODELO.docx'
         
-        return Document(path_recibo)
+        return Document(path_recibo_modelo)
+        
     
+    def criar_doc(self):
+        self._criar_doc()
+        
+        return self.modelo_recibo
     
     def _gerar(self):
         self.modelo_recibo = self._carregar_doc_modelo()
         self.tabelas = self.modelo_recibo.tables
         
         
-    
-    def criar_doc(self):
+    def _criar_doc(self):
         self._gerar()
         
         contador_recibos = 0
@@ -158,7 +149,7 @@ class Recibos():
             for row in rows:
                 for cell in row.cells:
                     
-                    if cell.text == 'RECIBO ALUGUEL' and index > 0:
+                    if cell.text == 'RECIBO DE ALUGUEL' and index > 0:
                         contador_titulos += 1
                     
                     if contador_titulos > 1:
@@ -167,14 +158,21 @@ class Recibos():
                         
                     if contador_recibos < 12:
                         for paragrafo in cell.paragraphs:
-                            novo_texto = Recibos.substituir_valor(self.calculo_recibo[contador_recibos], paragrafo.text)
+                            novo_texto = self._substituir_valor(self.calculo_recibo[contador_recibos], paragrafo.text)
                             paragrafo.text = novo_texto
                             paragrafo.style.font.size = Pt(10.5)
                             
                             
-    @staticmethod
-    def substituir_valor(recibo, texto):
+                            
+    
+    def _substituir_valor(self, recibo, texto):
         for key in recibo.keys():
             texto = texto.replace(key, recibo[key])
-        
         return texto
+    
+    def nome_arquivo(self, dt_final_contrato):
+        split = dt_final_contrato.split('/')
+        ano = split[-1]
+        nome_arquivo = self.path_pasta_recibos+ "/Recibos {}.docx".format(ano)
+        
+        return nome_arquivo
