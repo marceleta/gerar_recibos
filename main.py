@@ -181,7 +181,7 @@ class GerarRecibo(MDScreen):
         
         for key in keys:
             valor = valores[key]
-            if valor is "":
+            if valor == "":
                 todos_campos_preenchidos = False
                 break
             
