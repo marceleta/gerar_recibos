@@ -173,6 +173,6 @@ class Recibos():
     def nome_arquivo(self, dt_final_contrato):
         split = dt_final_contrato.split('/')
         ano = split[-1]
-        nome_arquivo = self.path_pasta_recibos+ "/Recibos {}.docx".format(ano)
+        nome_arquivo = self.path_pasta_recibos+ "/{}.docx".format(ano)
         
         return nome_arquivo
