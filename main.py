@@ -193,8 +193,7 @@ class GerarRecibo(MDScreen):
     def abrir_documento(self, full_path_doc):
         
         if platform.system() == 'Windows':
-            print(os.getcwd())
-            os.startfile(full_path_doc)
+            os.system('start '+full_path_doc)
         else:
             subprocess.call(('xdg-open', full_path_doc))
         

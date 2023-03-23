@@ -162,6 +162,9 @@ class Recibos():
                             paragrafo.text = novo_texto
                             paragrafo.style.font.size = Pt(10.5)
                             
+                            runs = paragrafo.runs
+                            for run in runs:
+                                run.bold = True
                             
                             
     
