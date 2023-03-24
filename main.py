@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from kivymd.app import MDApp
 from kivymd.uix.widget import MDWidget
 from kivymd.uix.list import OneLineListItem
@@ -188,22 +190,15 @@ class GerarRecibo(MDScreen):
         return todos_campos_preenchidos
         
         
-        
-        
     def abrir_documento(self, full_path_doc):
         
         if platform.system() == 'Windows':
-            os.system('start '+full_path_doc)
+            path = Path(full_path_doc)
+            os.startfile(path)
         else:
             subprocess.call(('xdg-open', full_path_doc))
         
-        
-        
-    def validar_valor_parcela(self, instance, input):
-        print(input)
-        ''' if input == '\t':
-            print(input) '''
-            
+    
     def tratar_tabulacao(self, instance, texto):
         tabulado = False
         if len(texto) > 0:
